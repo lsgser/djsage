@@ -113,3 +113,31 @@
 function Music(link){
 	window.open(link)
 }
+
+const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+let countDown = new Date('Aug 2, 2020 00:00:00').getTime(),
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+
+        document.getElementById('days').innerText = Math.floor(distance / (day)),
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+        /*
+        document.getElementById('days-text').innerText = Math.floor(distance / (day))==1?' DAY':' DAYS'
+        document.getElementById('hours-text').innerText = Math.floor((distance % (day)) / (hour))==1?' HOUR':' HOURS'
+        document.getElementById('minute-text').innerText = Math.floor((distance % (hour)) / (minute))==1?' MINUTE':' MINUTES'
+        document.getElementById('seconds-text').innerText = Math.floor((distance % (minute)) / second)==1?' SECOND':' SECONDS'
+      //do something later when date is reached
+      //if (distance < 0) {
+      //  clearInterval(x);
+      //  'IT'S MY BIRTHDAY!;
+      //}
+		*/
+}, second)
