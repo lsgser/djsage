@@ -119,7 +119,7 @@ const second = 1000,
       hour = minute * 60,
       day = hour * 24;
 
-let countDown = new Date('Aug 2, 2020 00:00:00').getTime(),
+let countDown = new Date('Aug 2, 2020 10:24:00').getTime(),
     x = setInterval(function() {    
 
       let now = new Date().getTime(),
@@ -129,15 +129,9 @@ let countDown = new Date('Aug 2, 2020 00:00:00').getTime(),
         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-        /*
-        document.getElementById('days-text').innerText = Math.floor(distance / (day))==1?' DAY':' DAYS'
-        document.getElementById('hours-text').innerText = Math.floor((distance % (day)) / (hour))==1?' HOUR':' HOURS'
-        document.getElementById('minute-text').innerText = Math.floor((distance % (hour)) / (minute))==1?' MINUTE':' MINUTES'
-        document.getElementById('seconds-text').innerText = Math.floor((distance % (minute)) / second)==1?' SECOND':' SECONDS'
-      //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
-		*/
+        
+      if (distance < 0) {
+      	document.getElementById('timer').style.display="none"	
+      }
+	
 }, second)
