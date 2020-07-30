@@ -1164,32 +1164,36 @@ footer .credits a {
 .timer-container {
   color: white;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0rem;
   text-align: center;
 }
 
 li.timer-list {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 0.8em;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 span.list-span {
   display: block;
-  font-size: 4.0rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .timer-text{
   color:white;
+  text-align: center;
 }
-/*
+
 li span.timer {
   display: block;
   font-size: 4.5rem;
+  text-align: center;
 }
-*/
+
 /*======================================
 //--//-->   BUTTON
 ======================================*/
